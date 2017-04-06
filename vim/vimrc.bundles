@@ -62,7 +62,7 @@ let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.spell = 'Ꞩ'
 let g:airline_symbols.notexists = '∄'
-let g:airline_symbols.whitespace ='Ξ'
+let g:airline_symbols.whitespace = 'Ξ'
 
 " syntastic
 let g:syntastic_always_populate_loc_list = 1
@@ -72,6 +72,7 @@ let g:syncstastic_check_on_wq = 0
 
 " nerdtree
 nmap <leader>n :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " nerdcommenter
 let g:NERDSpaceDelims = 1
@@ -129,6 +130,7 @@ hi IndentGuidesEven ctermbg=darkgrey
 let g:UltiSnipsExpandTrigger = '<leader><tab>'
 let g:UltiSnipsJumpForwardTrigger = '<leader><tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<leader><s-tab>'
+
 " YouCompleteMe
 let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1

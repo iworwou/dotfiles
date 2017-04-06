@@ -1,0 +1,45 @@
+out_to_x no
+own_window no
+out_to_console yes
+background no
+max_text_width 0
+
+# Update interval in seconds
+update_interval 2.0
+
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Shorttens units to a single character (kiB->k,GiB->G,etc.).Default is off.
+short_units yes
+
+# How strict should if_up be when testing an interface for being up?
+# The value is one of up,link or address,to check for the interface
+# being solely up,being up and having link or being up,having link
+# and an assigned IP address.
+if_up_strictness address
+
+# Add spaces to keep things from moving about? This only affects certain objects.
+# use_spacer should have an argument of left,right, or none
+use_spacer left
+
+# Force UTF-8? note that UTF-8 support required XFT
+override_utf8_locale no
+
+# number of cpu samples to average
+# set to 1 to disable averaging
+cpu_avg_samples 2
+
+#Stuff after 'TEXT' will be formatted on screen
+TEXT
+# CPU stats
+CPU ${cpu cpu1}% | \
+RAM ${mem} | \
+# Free space on /home
+Disk: ${fs_free /home} | \
+# Ethernet status
+Up: ${upspeed wlp58s0} kb/s | \
+Down: ${downspeed wlp58s0} kb/s | \
+Battery ${battery_percent BAT0}% | \
+${time %y-%m-%d} ${time %H:%M}

@@ -1,0 +1,15 @@
+!! RXVT-unicode setting
+Xft.dip: 96
+URxvt.preeditType: Root
+
+! color set
+URxvt.background: black 
+URxvt.foreground: white 
+URxvt.colorBD: yellow
+URxct.colorUL: green
+
+! font set
+URxvt.font: xft:Consolas:size=14
+
+! scroll set
+URxvt.scrollBar: False 

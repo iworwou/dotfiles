@@ -1,0 +1,73 @@
+" dont't bother with vi compatibility
+set nocompatible
+
+let mapleader = ','
+
+" install bundles
+source ~/.vimrc.bundles
+
+" automatically detect file types
+filetype plugin indent on
+
+" syntax highlighting
+syntax enable
+
+" show line numbers
+set number 
+" show the ruler 
+set ruler 
+" highlighting show current line/column
+set cursorline
+set cursorcolumn
+
+" do not wrap lines
+set nowrap
+" indent at the same level of the previews line
+set autoindent
+set smartindent
+" use indents of 4 spaces
+set shiftwidth=4
+" tabs are spaces, not tabs
+set expandtab
+" an indentation every four columns
+set tabstop=4
+" let backspace delete indent
+set softtabstop=4
+
+" display the current mode
+set showmode
+" show partial commands in status line and selected characters/lines in visual mode
+set showcmd
+" always show the status line
+set laststatus=2
+
+" show list instead of just completing
+set wildmenu
+" command <Tab> completion, list matches, then longest common part, then all
+set wildmode=list:longest,full
+
+" Reload files changed outside vim
+set autoread
+
+set noswapfile
+set nobackup
+set nowb
+
+" highlight search terms 
+set hlsearch
+" find as you type search
+set incsearch
+" case insensitive search
+set ignorecase
+" case-insensitive search if any caps
+set smartcase
+
+set history=1000
+
+set background=dark
+let g:molokai_original = 1
+colorscheme molokai
+
+set encoding=utf-8
+autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
